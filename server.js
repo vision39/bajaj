@@ -6,9 +6,7 @@ const app = express();
 app.use(express.json());  
 app.use(cors());  
 
-app.get("/bfhl", (req, res) => {
-    res.json({ operation_code: 1 });
-});
+const PORT = process.env.PORT || 5000;
 
 app.post("/bfhl", (req, res) => {
     try {
@@ -26,7 +24,7 @@ app.post("/bfhl", (req, res) => {
             is_success: true,
             user_id: "dipak_kumar_ray_10032003",  
             email: "22bcs11111@cuchd.in",  
-            roll_number: "22bcs11111",  
+            roll_number: "22bcs11111", 
             numbers,
             alphabets,
             highest_alphabet
